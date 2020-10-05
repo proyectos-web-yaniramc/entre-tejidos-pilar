@@ -1,0 +1,12 @@
+---
+layout: default
+img: filter.jpg
+category: Services
+title: Filtros ¿Como funcionan?
+---
+  
+  Los filtros de las mascarillas son necesarios para mantenerse protegido contra el virus. Dichos filtros se encargan de no permitir la 
+  salida del virus desde su boca hacia los demás ciudadanos. De esta manera nos protegemos unos a otros. 
+  
+  Existen dos tipos de filtros para mascarillas que son Filtro TNT o Filtro Hidrófugo. 
+  

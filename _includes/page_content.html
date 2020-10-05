@@ -1,0 +1,149 @@
+<!-- Page Content -->
+
+<section id="filters">
+    <div class="content-section-materials">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading-materials">Filtro Hidrófugo</h2>
+                    <div class="lead-filter">
+                        <p>
+                            Repele el agua y las microgotas actuando como barrera para virus y bacterias. Tejido 100%
+                            algodón, lavable, transpirable, anti olor, con tratamiento hidrófugo y acabado de Parafina.
+                            Está demostrado que nuestro tejido hidrófugo destruye muy rápidamente los patógenos del
+                            coronavirus, la gripe, la listeria, etc. No es irritativo y proporciona un tacto suave para
+                            uso prolongado.
+                            Reutilizable. Lavado a mano (recomendado) en un recipiente sumergir durante 15 minutos en
+                            agua tibia con
+                            detergente neutro. Enjuagar y secar en secadora preferiblemente. Importante planchar a
+                            150ºC.
+                            Lavado a máquina, lavar en un programa para ropa delicada con detergente neutro. Secar en
+                            secadora preferiblemente. Importante planchar a 150ºC.
+                        </p>
+                    </div>
+                </div>
+                <div class="img-filter col-sm-2">
+                    <img src="img/services/filtro-hidrofugado.jpg" alt="" height="200" width="250">
+                </div>
+
+
+                <div class="col-sm-4">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading-materials">Filtro TNT</h2>
+                    <div class="lead-filter">
+                        <p>
+                            ¿Qué es el tejido no tejido (TNT)?
+                            El TNT es conocido como tejido no tejido, con un aspecto de «tela-papel», esta realizado con
+                            microfibras no tejidas y es perfecto para este uso ya que es impermeable y transpirable.
+                            Ideal para utilización como filtro en la fabricación de mascarillas higiénicas
+                            reutilizables, conforme a la UNE 0065. Es un material resistente disponible en diferentes
+                            grosores y colores.
+                            <br>Se puede lavar con lejía y a 60 o 90 grados. Después de lavar, planchar (en seco) a
+                            120º/140º de 10 a 15 segundos se puede reutilizar. Efectividad del tratamiento durante 25
+                            lavados.
+                        </p>
+                    </div>
+                </div>
+                <div class="img-filter col-sm-2">
+                    <img src="img/services/filtro-tnt.jpg" alt="" height="200" width="250">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="composition">
+
+    {% for post in site.posts reversed %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    {% if thecycle == 'odd' %}
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">{{ post.title }}</h2>
+                    <div class="lead">{{ post.content }}</div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/services/{{ post.img }}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    {% else %}
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">{{ post.title }}</h2>
+                    <div class="lead">{{ post.content }}</div>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/services/{{ post.img }}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+    {% endif %}
+    {% endfor %}
+</section>
+
+
+<section id="services">
+    <div class="content-section-materials">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading-services">Mascarillas por Encargo</h2>
+                    <div class="lead-service">
+                        <ul>
+                            <li>Los encargos se realizan por email o whatsapp.</li>
+                            <li>Los precios varian dependiendo del filtro.</li>
+                            <li>Envios mediante Correos</li>
+                            <li>No se incluye gastos de envio en el precio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <img src="img/services/yarn2.jpg" height="400" width="600">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="fabric-clothing">
+
+    {% include carousel.html unit="%" duration="7" %}
+
+</section>

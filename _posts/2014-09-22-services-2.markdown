@@ -1,0 +1,12 @@
+---
+layout: default
+img: tejidos.png
+category: Services
+title: Nuestros tejidos
+---
+   
+  Nos centramos en la calidad de nuestros tejidos, siendo todos de algodón, antibacterianos, transpirables y reutilizables.
+  Los filtros pueden ser hidrófugo o TNT.
+  
+  Todos nuestros tejidos tiene mas de 50 ciclos de lavados a una temperatura que aguanta desde los 30 grados, siendo recomendable para un uso adecuado 
+  de desifección, lavar a temperatura entre 60 a 90 grados.
