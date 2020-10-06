@@ -59,6 +59,15 @@ social:
   - title: whatsapp
     url: https://api.whatsapp.com/send?phone=34690104594?text=Hola%20mi%20pedido%20es...
 
+# ----------------------- #
+#   Images loop    #
+# ----------------------- #
+
+defaults:
+  - scope:
+      path: "img/masks"
+    values:
+      image: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

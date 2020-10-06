@@ -1,0 +1,27 @@
+<section id="gallery">
+    <div class="content-section-gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Galeria</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3">
+                {% for file in site.static_files %}
+                {% if file.image %}
+                <a target="_blank" href="{{ site.baseurl }}{{ file.path }}">
+                    <div class="images-gallery col-sm-4">
+                        <img src="{{ site.baseurl }}{{ file.path }}" height="200" width="300">
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

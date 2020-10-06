@@ -114,10 +114,10 @@
 
 
 <section id="services">
-    <div class="content-section-materials">
+    <div class="content-section-services">
 
         <div class="container">
-            <div class="row">
+            <div class="row row-cols-1 row-cols-md-2">
                 <div class="col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
@@ -130,10 +130,11 @@
                             <li>No se incluye gastos de envio en el precio.</li>
                         </ul>
                     </div>
+                    <img class="logo-correos" src="img/services/correos.png">
                 </div>
 
                 <div class="col-sm-6">
-                    <img src="img/services/yarn2.jpg" height="400" width="600">
+                    <img class="image-service" src="img/services/yarn2.jpg" height="400" width="600">
                 </div>
             </div>
 
@@ -142,8 +143,17 @@
     </div>
 </section>
 
-<section id="fabric-clothing">
-
-    {% include carousel.html unit="%" duration="7" %}
-
+<section id="masks">
+    <div class="content-section-mask">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Nuestras Mascarillas</h2>
+                </div>
+            </div>
+        </div>
+        {% include carousel.html duration="7" %}
+    </div>
 </section>
