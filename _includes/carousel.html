@@ -1,4 +1,4 @@
-{% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n" %}
+{% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q" %}
 {% assign letters = letterstring | split: ',' %}
 
 <div id="masks" class="carousel__holder">
@@ -42,8 +42,10 @@
 <style>
 .carousel__holder {position: relative; padding-bottom: {{ include.height }};}
 .carousel {
-  height: 500px;
-  width: 460px;
+  height: 420px;
+  width: 480px;
+  margin-left: 10px;
+  object-fit: cover;
 }
 .carousel__controls,
 .carousel__activator {

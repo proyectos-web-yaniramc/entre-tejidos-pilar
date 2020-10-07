@@ -196,7 +196,8 @@ h6 {
 }
 
 .logo-correos {
-    margin-top: 50px;
+    margin-top: 100px;
+    float: left;
     height: 50px;
     width: 100px;
 }
@@ -215,7 +216,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../img/tinker.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -285,8 +286,4 @@ p.copyright {
 
 .social-media {
     margin-left: 20px;
-}
-
-.page-scroll {
-    color: #544D4C;
 }
