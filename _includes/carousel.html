@@ -1,51 +1,64 @@
-{% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q" %}
+{% assign letterstring = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s" %}
 {% assign letters = letterstring | split: ',' %}
 
-<div id="masks" class="carousel__holder">
-    <div class="carousel">
-        {% for item in site.data.carousel.images %}
-          <input class="carousel__activator" type="radio" name="carousel" id="{{ letters[forloop.index0] }}" {% if forloop.first %}checked="checked"{% endif %} />
-        {% endfor %}
-        {% for item in site.data.carousel.images %}
-          {% if forloop.index == forloop.length %}
-            {% assign nextindex = 0 %}
-          {% else %}
-            {% assign nextindex = forloop.index0 | plus: 1 %}
-          {% endif %}
-          {% assign nextletter = letters[nextindex] %}
-          {% if forloop.index0 == 0 %}
-            {% assign previndex = forloop.length | minus: 1 %}
-          {% else %}
-            {% assign previndex = forloop.index0 | minus: 1 %}
-          {% endif %}
-          {% assign prevletter = letters[previndex] %}
-          <div class="carousel__controls">
-              <label class="carousel__control carousel__control--backward" for="{{ prevletter }}"></label>
-              <label class="carousel__control carousel__control--forward" for="{{ nextletter }}"></label>
-          </div>
-        {% endfor %}
-        <div class="carousel__track">
-          <ul>
-            {% for item in site.data.carousel.images %}
-            <li class="carousel__slide" style="background-image: url('{{ item.image }}');"></li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="carousel__indicators">
-            {% for item in site.data.carousel.images %}
-              <label class="carousel__indicator" for="{{ letters[forloop.index0] }}"></label>
-            {% endfor %}
+<section id="masks">
+    <div class="content-section-carousel">
+        <div class="container-fluid">
+            <div class="carousel__holder">
+                <div class="carousel">
+                    {% for item in site.data.carousel.images %}
+                    <input class="carousel__activator" type="radio" name="carousel" id="{{ letters[forloop.index0] }}"
+                           {% if
+                           forloop.first %}checked="checked" {% endif %}/>
+                    {% endfor %}
+                    {% for item in site.data.carousel.images %}
+                    {% if forloop.index == forloop.length %}
+                    {% assign nextindex = 0 %}
+                    {% else %}
+                    {% assign nextindex = forloop.index0 | plus: 1 %}
+                    {% endif %}
+                    {% assign nextletter = letters[nextindex] %}
+                    {% if forloop.index0 == 0 %}
+                    {% assign previndex = forloop.length | minus: 1 %}
+                    {% else %}
+                    {% assign previndex = forloop.index0 | minus: 1 %}
+                    {% endif %}
+                    {% assign prevletter = letters[previndex] %}
+                    <div class="carousel__controls">
+                        <label class="carousel__control carousel__control--backward" for="{{ prevletter }}"></label>
+                        <label class="carousel__control carousel__control--forward" for="{{ nextletter }}"></label>
+                    </div>
+                    {% endfor %}
+                    <div class="carousel__track">
+                        <ul>
+                            {% for item in site.data.carousel.images %}
+                            <li class="carousel__slide" style="background-image: url('{{ item.image }}');"></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="carousel__indicators">
+                        {% for item in site.data.carousel.images %}
+                        <label class="carousel__indicator" for="{{ letters[forloop.index0] }}"></label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+</section>
 
 <style>
-.carousel__holder {position: relative; padding-bottom: {{ include.height }};}
+.carousel__holder {
+    position: relative;
+    margin: 1rem 0 1rem;
+    overflow: hidden;
+}
 .carousel {
-  height: 420px;
+  height: 400px;
   width: 480px;
-  margin-left: 10px;
-  object-fit: cover;
+  overflow: visible;
+  padding: 0;
 }
 .carousel__controls,
 .carousel__activator {
@@ -101,14 +114,14 @@
           transform: rotate(-135deg);
 }
 .carousel__control--forward {
-  right: -1400px;
+  right: -1380px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .carousel__indicators {
   position: absolute;
   bottom: 20px;
-  width: 950px;
+  width: 1150px;
   text-align: end;
 }
 .carousel__indicator {
@@ -175,6 +188,11 @@
   background-position: center;
 }
 {% endfor %}
+
+
+
+
+
 </style>
 
 <script>
@@ -214,4 +232,9 @@
     elements[j].click();
   },{{ include.duration }}000);
   {% endif %}
+
+
+
+
+
 </script>
